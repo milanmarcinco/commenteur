@@ -1,0 +1,120 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: normal;
+}
+
+button, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 1rem;
+  background-color: #252525;
+}
+
+#app {
+  max-width: 300px;
+  padding: 0.5rem;
+}
+#app header {
+  margin-bottom: 0.5rem;
+}
+
+#controls-form {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+main {
+  position: relative;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border-radius: 100%;
+  background-color: #252525;
+  transition: 250ms all ease;
+}
+.indicator--green {
+  background-color: #36b86c;
+}
+.indicator--red {
+  background-color: #d84747;
+}
+
+.textbox {
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 400;
+  line-height: 1.25;
+  border-radius: 3px;
+  border: 1px solid #636363;
+  background-color: #3a3a3a;
+  transition: 100ms all ease;
+}
+.textbox::placeholder {
+  color: #8d8d8d;
+}
+.textbox:focus {
+  border-color: #b8b8b8;
+}
+.textbox--small {
+  width: 100%;
+  padding: 0.2rem;
+  flex-grow: 1;
+  letter-spacing: 0.5px;
+}
+.textbox--large {
+  width: 100%;
+  padding: 0.15rem 0.2rem;
+  min-height: 300px;
+  resize: vertical;
+}
+
+.btn {
+  font-size: 0.8rem;
+  color: #8d8d8d;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  border: 1px solid #636363;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+.btn:hover, .btn:focus {
+  color: white;
+  border-color: #b8b8b8;
+}
+.btn:active {
+  color: white;
+  border-color: white;
+  background-color: white;
+}

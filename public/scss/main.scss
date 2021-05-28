@@ -1,0 +1,115 @@
+@import "_reset";
+@import "_colors";
+
+body {
+	font-family: 'Inter', 'Arial', sans-serif;
+	font-size: 1rem;
+	background-color: $body-bg-color;
+}
+
+#app {
+	max-width: 300px;
+	padding: .5rem;
+
+	header {
+		margin-bottom: .5rem;
+	}
+
+}
+
+#controls-form {
+	display: flex;
+	align-items: stretch;
+	gap: .5rem;
+}
+
+main {
+	position: relative;
+}
+
+.indicator {
+	width: 10px;
+	height: 10px;
+
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+
+	border-radius: 100%;
+	background-color: $body-bg-color;
+
+	transition: 250ms all ease;
+
+	&--green {
+		background-color: $green;
+	}
+
+	&--red {
+		background-color: $red;
+	}
+
+}
+
+.textbox {
+	font-size: .8rem;
+	color: $text-color;
+	font-weight: 400;
+	line-height: 1.25;
+
+	border-radius: 3px;
+	border: 1px solid $border-color;
+	background-color: $input-bg-color;
+
+	transition: 100ms all ease;
+
+	&::placeholder {
+		color: $input-placeholder-color;
+	}
+
+	&:focus {
+		border-color: $focus-border-color;
+	}
+
+	&--small {
+		width: 100%;
+		padding: .2rem;
+		flex-grow: 1;
+		letter-spacing: .5px;
+	}
+
+	&--large {
+		width: 100%;
+		padding: .15rem .2rem;
+		min-height: 300px;
+		resize: vertical;
+	}
+}
+
+.btn {
+	font-size: .8rem;
+	color: $button-text-color;
+	font-weight: 400;
+	line-height: 1;
+
+	padding: .2rem .5rem;
+
+	border-radius: 3px;
+	border: 1px solid $border-color;
+	background-color: $button-bg-color;
+
+	cursor: pointer;
+	transition: all 100ms ease;
+
+	&:hover,
+	&:focus {
+		color: $text-color;
+		border-color: $focus-border-color;
+	}
+
+	&:active {
+		color: $button-active-bg-color;
+		border-color: $button-active-bg-color;
+		background-color: $button-active-bg-color;
+	}
+
+}
